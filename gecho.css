@@ -17,18 +17,32 @@ body {
     font-family: 'sofachrome-italic';
 }
 
+.contact {
+    color: salmon;
+    font-family: 'sofachrome';
+    font-size: 2rem;
+    font-weight: 100;
+    letter-spacing: 4px;
+    text-align: center;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    margin-top: 6rem;
+}
 
+a:hover {
+    opacity: 0.7;
+  }
 
 div.table {
     display: table;
     margin: 0 auto;
-    background-color: red;
+    background-color: none;
 }
 
 ul.horizontal-list{
     padding: 1.25rem 1.25rem 0;
     list-style: none;
-    background-color: #33658A
+    background-color: none;
 }
 
 ul.horizontal-list li {
@@ -39,6 +53,39 @@ ul.horizontal-list li {
     display: table;
     margin: 0 auto;
 }
+
+/* Style all font awesome icons */
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+
+  .fa-instagram {
+    background: #8134AF;
+    color: white;
+  }
+
+  .fa-youtube {
+    background: #dd2a7b;
+    color: white;
+  }
 
 
 h1 {
@@ -53,11 +100,15 @@ h1 {
 }
 
 h2 {
-    color: gray;
-    display: inline;
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 0 20px;
+    color: whitesmoke;
+    font-family: 'sofachrome';
+    font-size: 2rem;
+    font-weight: 100;
+    letter-spacing: 4px;
+    text-align: center;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    margin-top: 6rem;
 }
 
 
@@ -70,10 +121,6 @@ p {
 }
 
 
-
-
-
-
 /* define the class */
 
 .header{
@@ -81,20 +128,6 @@ p {
     height: 80px;
     display: block;
     background-color: #f4a259;
-}
-
-.inner_header{
-    width: 80%;
-    height: 100%;
-    display: block;
-    margin: 0 auto;
-    background-color: #f4a259
-}
-
-.logo_container{
-    height: 100%;
-    display: table;
-    float: left;
 }
 
 /*define specific element within a div class*/
@@ -106,34 +139,6 @@ p {
     font-family:'sofachrome-italic';
     font-size: 32px;
     font-weight: 200;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
-}
-
-
-/*  1. Where within the parent div does this element exist?
-    2. how should a behave within .navigation?
-    3. how should li behave within navigation a?*/
-.navigation{
-    float: right;
-    height: 100%;
-}
-
-/*the a item is a table which floats to the left of .navigation element*/
-.navigation a{
-    height: 100%;
-    display: table; /* each a element is like a column*/
-    float: left;
-    padding: 0px 20px; /*defining the right padding (space between elements)*/
-}
-
-.navigation a li{
-    display: table-cell;
-    vertical-align: middle;
-    height: 100%;
-    color: white;
-    font-family: 'sofachrome-italic';
-    font-size: 16px;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
 }
