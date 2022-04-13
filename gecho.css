@@ -56,9 +56,22 @@ ul.horizontal-list li {
 }
 
 .embed-youtube {
-    display: table;
-    margin: 0 auto;
+    /*display: table;
+    margin: 0 auto;*/
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
 }
+
+.embed-youtube iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
 
 /* Style all font awesome icons */
 .fa {
