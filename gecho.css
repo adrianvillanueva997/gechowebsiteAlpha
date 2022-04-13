@@ -120,6 +120,7 @@ ul.horizontal-list li {
 h1 {
     width: 100%;
     color: whitesmoke;
+    text-shadow: 0.5rem -0.5rem 1rem yellow, -0.5rem 0.5rem purple;
     font-family: 'Sofachrome';
     font-style: italic;
     font-size: 8vw;
