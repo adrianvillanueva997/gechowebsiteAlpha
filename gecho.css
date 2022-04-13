@@ -6,20 +6,26 @@
     
 }
 
-/* @font-face{
-    src: url(fonts/sofachrome\ rg\ it.ttf);
-    font-family: sofachrome-italic;
-} */
+@import url(//db.onlinewebfonts.com/c/94f4f6f12e1716b871141ea5e5fc6988?family=Sofachrome);
+
+@font-face {font-family: "Sofachrome"; 
+    src: url("//db.onlinewebfonts.com/t/94f4f6f12e1716b871141ea5e5fc6988.eot"); 
+    src: url("//db.onlinewebfonts.com/t/94f4f6f12e1716b871141ea5e5fc6988.eot?#iefix") format("embedded-opentype"), 
+    url("//db.onlinewebfonts.com/t/94f4f6f12e1716b871141ea5e5fc6988.woff2") format("woff2"), 
+    url("//db.onlinewebfonts.com/t/94f4f6f12e1716b871141ea5e5fc6988.woff") format("woff"), 
+    url("//db.onlinewebfonts.com/t/94f4f6f12e1716b871141ea5e5fc6988.ttf") format("truetype"), 
+    url("//db.onlinewebfonts.com/t/94f4f6f12e1716b871141ea5e5fc6988.svg#Sofachrome") format("svg"); 
+}
 
 
 body {
     background-image: url(sandyback.jpeg);
-    font-family: 'sofachrome-italic';
+    font-family: 'Sofachrome';
 }
 
 .contact {
     color: salmon;
-    font-family: 'sofachrome';
+    font-family: 'Sofachrome';
     font-size: 2rem;
     font-weight: 100;
     letter-spacing: 4px;
@@ -90,7 +96,7 @@ ul.horizontal-list li {
 
 h1 {
     color: whitesmoke;
-    font-family: 'sofachrome';
+    font-family: 'Sofachrome';
     font-size: 5rem;
     font-weight: 700;
     letter-spacing: 8px;
@@ -101,7 +107,7 @@ h1 {
 
 h2 {
     color: whitesmoke;
-    font-family: 'sofachrome';
+    font-family: 'Sofachrome';
     font-size: 2rem;
     font-weight: 100;
     letter-spacing: 4px;
@@ -136,7 +142,7 @@ p {
     height: 100%;
     display: table-cell;
     vertical-align: middle;
-    font-family:'sofachrome-italic';
+    font-family:'Sofachrome';
     font-size: 32px;
     font-weight: 200;
     -webkit-text-stroke-width: 2px;
