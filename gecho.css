@@ -18,9 +18,9 @@
 
 
 body {
-    background-image: url(background2.jpeg);
+    background-image: url(background2.png);
+    background-size: cover;
     font-family: 'Sofachrome';
-    font-size: small;
     width: 100vw;
     height: 100vh;
 }
@@ -102,40 +102,42 @@ ul.horizontal-list li {
 /* Style all font awesome icons */
 .fa {
     padding: 1.25vw;
-    font-size: 4px;
-    width: 6.25vw;
+    width: auto; /* change to auto to allow content to determine width */
     text-align: center;
     text-decoration: none;
     font-family: 'Sofachrome';
   }
   
+  .fa-icon-box {
+    font-family: 'Sofachrome' !important;
+    font-size: 2vw !important; 
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    display: inline-block; /* add to make the box display inline */
+    vertical-align: middle; /* add to vertically align the box */
+    background-color: antiquewhite;
+  }
+  
   /* Add a hover effect if you want */
-    .fa:hover {
-        opacity: 0.7;
-    }
+  .fa:hover {
+    opacity: 0.7;
+  }
   
   /* Facebook */
-    .fa-facebook {
-        background: #3B5998;
-        color: white;
-    }
-
-
-    .fa-instagram {
-        background: #8134AF;
-        color: white;
-    }
-
-    .fa-youtube {
-        background: #dd2a7b;
-        color: white;
-    }
-
-    .fa-icon-box a{
-        text-align: center;
-        background-color: white;
-        font-size: small;
-    }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #8134AF;
+    color: white;
+  }
+  
+  .fa-youtube {
+    background: #dd2a7b;
+    color: white;
+  }
 
 
 /*GECHO STORE*/
