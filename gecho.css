@@ -110,6 +110,7 @@ ul.horizontal-list li {
   
   .fa-icon-box {
     font-family: 'Sofachrome' !important;
+    border-radius: 40%;
     font-size: 2vw !important; 
     padding-top: 2vw;
     padding-bottom: 2vw;
