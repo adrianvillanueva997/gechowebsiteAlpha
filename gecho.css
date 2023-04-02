@@ -131,9 +131,10 @@ ul.horizontal-list li {
         color: white;
     }
 
-    .fa-icon-box {
+    .fa-icon-box a{
         text-align: center;
         background-color: white;
+        font-size: small;
     }
 
 
