@@ -101,7 +101,7 @@ ul.horizontal-list li {
 /* Style all font awesome icons */
 .fa {
     padding: 1.25vw;
-    font-size: 1rem;
+    font-size: 4px;
     width: 6.25vw;
     text-align: center;
     text-decoration: none;
