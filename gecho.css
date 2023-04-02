@@ -20,6 +20,7 @@
 body {
     background-image: url(background2.jpeg);
     font-family: 'Sofachrome';
+    font-size: small;
     width: 100vw;
     height: 100vh;
 }
