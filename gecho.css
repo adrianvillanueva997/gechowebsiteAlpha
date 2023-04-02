@@ -131,10 +131,7 @@ ul.horizontal-list li {
     }
 
     .fa-icon-box {
-        scale: 1.2;
         text-align: center;
-        padding-right: 1.5rem;
-        border-radius: 2rem;
         background-color: white;
     }
 
