@@ -50,24 +50,90 @@ a.paybutton{
 
 a:hover {
     opacity: 0.7;
+    transform: scale(1.2);
   }
 
-div.table {
-    display: table;
+/* Navbar container */
+.table {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     margin: 0 auto;
-    background-color: none;
-    margin-bottom: 1%;
-}
+  }
+  
+  /* Navbar list */
+  .horizontal-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Navbar links */
+  .horizontal-list li {
+    margin: 0 0px;
+    font-size: 4vw;
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 768px) {
+    /* Navbar container */
+    .table {
+      flex-wrap: wrap;
+    }
+    
+    /* Navbar list */
+    .horizontal-list {
+      justify-content: center;
+    }
+    
+    /* Navbar links */
+    .horizontal-list li {
+      margin: 5px;
+    }
+  }
+  
 
-ul.horizontal-list{
-    padding: 5vw 30vw 0;
-    list-style: none;
-    /*background-color: none;*/
+/* Style all font awesome icons */
+.fa {
+    padding: 5vw 6vw;
+    width: auto; /* change to auto to allow content to determine width */
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Sofachrome';
 }
+  
+  .fa-icon-box {
+    font-family: 'Sofachrome' !important;
+    font-size: 1vw;
+    display: inline-block; /* add to make the box display inline */
+    vertical-align: middle; /* add to vertically align the box */
+    background-color: antiquewhite;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #8134AF;
+    color: white;
+  }
+  
+  .fa-youtube {
+    background: #dd2a7b;
+    color: white;
+  }
 
-ul.horizontal-list li {
-    display: inline;
-}
 
 .embed-youtube {
     /*display: table;
@@ -99,46 +165,6 @@ ul.horizontal-list li {
 }
 
 
-/* Style all font awesome icons */
-.fa {
-    padding: 1.25vw;
-    width: auto; /* change to auto to allow content to determine width */
-    text-align: center;
-    text-decoration: none;
-    font-family: 'Sofachrome';
-  }
-  
-  .fa-icon-box {
-    font-family: 'Sofachrome' !important;
-    border-radius: 40%;
-    font-size: 2vw !important; 
-    padding-top: 2vw;
-    padding-bottom: 2vw;
-    display: inline-block; /* add to make the box display inline */
-    vertical-align: middle; /* add to vertically align the box */
-    background-color: antiquewhite;
-  }
-  
-  /* Add a hover effect if you want */
-  .fa:hover {
-    opacity: 0.7;
-  }
-  
-  /* Facebook */
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-  
-  .fa-instagram {
-    background: #8134AF;
-    color: white;
-  }
-  
-  .fa-youtube {
-    background: #dd2a7b;
-    color: white;
-  }
 
 
 /*GECHO STORE*/
@@ -258,6 +284,7 @@ h1 {
     text-align: center;
     -webkit-text-stroke-width: 0.3vw;
     -webkit-text-stroke-color: black;
+    margin-bottom: 5%;
 }
 
 h2 {
