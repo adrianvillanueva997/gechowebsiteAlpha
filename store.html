@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Unbounded:wght@300;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Unbounded:wght@300;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -17,29 +20,6 @@
                     fontFamily: {
                         'space': ['Space Grotesk', 'sans-serif'],
                         'unbounded': ['Unbounded', 'cursive'],
-                    },
-                    animation: {
-                        'gradient': 'gradient 15s ease infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'float': 'float 10s ease-in-out infinite',
-                        'glow': 'glow 2s ease-in-out infinite alternate',
-                    },
-                    keyframes: {
-                        gradient: {
-                            '0%, 100%': { backgroundPosition: '0% 50%' },
-                            '50%': { backgroundPosition: '100% 50%' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        },
-                        glow: {
-                            '0%': { textShadow: '0 0 5px #fff, 0 0 10px #f59e0b' },
-                            '100%': { textShadow: '0 0 10px #fff, 0 0 20px #b45309, 0 0 30px #9f1239' },
-                        }
-                    },
-                    backgroundImage: {
-                        'biblical-pattern': "url('./wallpaper_biblical.png')",
                     },
                     colors: {
                         mystical: {
@@ -55,24 +35,6 @@
         }
     </script>
     <title>Gecho | Merch</title>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .text-gradient {
-                @apply bg-clip-text text-transparent bg-gradient-to-r;
-            }
-            .mystical-shadow {
-                text-shadow: 0 0 8px #f59e0b, 0 0 12px #b45309;
-            }
-        }
-    </style>
-    <style>
-        /* Fallback background if Tailwind's doesn't work */
-        .biblical-bg {
-            background-image: url('./wallpaper_biblical.png');
-            background-size: cover;
-            background-position: center;
-        }
-    </style>
 </head>
 
 <body class="font-space text-white bg-black min-h-screen relative overflow-x-hidden">
@@ -80,82 +42,118 @@
     <div class="fixed inset-0 z-0 opacity-70 bg-cover bg-center biblical-bg"></div>
 
     <!-- Biblical overlay - reduced opacity -->
-    <div class="fixed inset-0 z-1 bg-gradient-to-br from-mystical-wine/20 via-mystical-crimson/20 to-mystical-bronze/20 animate-gradient bg-[length:400%_400%]"></div>
+    <div
+        class="fixed inset-0 z-1 bg-gradient-to-br from-mystical-wine/20 via-mystical-crimson/20 to-mystical-bronze/20 animate-gradient bg-[length:400%_400%]">
+    </div>
 
     <!-- Floating orbs for mystical effect - moved to a higher z-index -->
-    <div class="fixed w-64 h-64 rounded-full bg-gradient-to-r from-mystical-gold/20 to-mystical-amber/10 blur-3xl top-1/4 -left-32 animate-float z-2"></div>
-    <div class="fixed w-80 h-80 rounded-full bg-gradient-to-r from-mystical-crimson/20 to-mystical-wine/10 blur-3xl bottom-1/4 -right-40 animate-float animation-delay-1000 z-2"></div>
-    <div class="fixed w-56 h-56 rounded-full bg-gradient-to-r from-mystical-amber/20 to-mystical-bronze/10 blur-3xl top-3/4 left-1/3 animate-float animation-delay-2000 z-2"></div>
+    <div
+        class="fixed w-64 h-64 rounded-full bg-gradient-to-r from-mystical-gold/20 to-mystical-amber/10 blur-3xl top-1/4 -left-32 animate-float z-2">
+    </div>
+    <div
+        class="fixed w-80 h-80 rounded-full bg-gradient-to-r from-mystical-crimson/20 to-mystical-wine/10 blur-3xl bottom-1/4 -right-40 animate-float animation-delay-1000 z-2">
+    </div>
+    <div
+        class="fixed w-56 h-56 rounded-full bg-gradient-to-r from-mystical-amber/20 to-mystical-bronze/10 blur-3xl top-3/4 left-1/3 animate-float animation-delay-2000 z-2">
+    </div>
 
     <!-- Content remains with the highest z-index -->
     <div class="relative z-10">
         <header id="header" class="pt-12 pb-6 text-center">
             <div class="mx-auto">
-                <h1 class="font-unbounded text-6xl md:text-7xl font-bold tracking-tighter text-gradient from-mystical-gold via-mystical-amber to-mystical-crimson animate-gradient bg-[length:200%] animate-glow">Merch</h1>
-                <p class="text-sm md:text-base uppercase tracking-widest text-amber-100 mt-2 animate-pulse-slow">mind-altering designs</p>
+                <h1
+                    class="font-unbounded text-6xl md:text-7xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-mystical-gold via-mystical-amber to-mystical-crimson animate-gradient-slow bg-[length:200%] [text-shadow:0_0_1px_rgba(0,0,0,0.1)]">
+                    Merch</h1>
+                <p class="text-sm md:text-base uppercase tracking-widest text-amber-100 mt-2 animate-pulse-slow">
+                    mind-altering designs</p>
             </div>
         </header>
 
-        <nav class="sticky top-0 z-50 backdrop-blur-md bg-black/40 py-4 border-y border-mystical-amber/30 mb-16">
+        <nav class="sticky top-0 z-50 backdrop-blur-md bg-black/40 py-4 border-y border-mystical-amber/30">
             <ul class="flex justify-center items-center space-x-8 md:space-x-12">
-                <li><a href="index.html" class="text-amber-100 hover:text-mystical-gold uppercase tracking-wider text-sm md:text-base font-medium transition-colors duration-300 relative group">Home<span class="absolute h-0.5 w-0 bg-gradient-to-r from-mystical-gold to-mystical-amber bottom-0 left-0 group-hover:w-full transition-all duration-300"></span></a></li>
-                <li><a href="index.html#music" class="text-amber-100 hover:text-mystical-gold uppercase tracking-wider text-sm md:text-base font-medium transition-colors duration-300 relative group">Music<span class="absolute h-0.5 w-0 bg-gradient-to-r from-mystical-gold to-mystical-amber bottom-0 left-0 group-hover:w-full transition-all duration-300"></span></a></li>
-                <li><a href="index.html#shows" class="text-amber-100 hover:text-mystical-gold uppercase tracking-wider text-sm md:text-base font-medium transition-colors duration-300 relative group">Shows<span class="absolute h-0.5 w-0 bg-gradient-to-r from-mystical-gold to-mystical-amber bottom-0 left-0 group-hover:w-full transition-all duration-300"></span></a></li>
-                <li><a href="index.html#about" class="text-amber-100 hover:text-mystical-gold uppercase tracking-wider text-sm md:text-base font-medium transition-colors duration-300 relative group">About<span class="absolute h-0.5 w-0 bg-gradient-to-r from-mystical-gold to-mystical-amber bottom-0 left-0 group-hover:w-full transition-all duration-300"></span></a></li>
+                <li><a href="index.html"
+                        class="text-amber-100 hover:text-mystical-gold uppercase tracking-wider text-sm md:text-base font-medium transition-colors duration-300 relative group">Home<span
+                            class="absolute h-0.5 w-0 bg-gradient-to-r from-mystical-gold to-mystical-amber bottom-0 left-0 group-hover:w-full transition-all duration-300"></span></a>
+                </li>
+                <li><a href="index.html#music"
+                        class="text-amber-100 hover:text-mystical-gold uppercase tracking-wider text-sm md:text-base font-medium transition-colors duration-300 relative group">Music<span
+                            class="absolute h-0.5 w-0 bg-gradient-to-r from-mystical-gold to-mystical-amber bottom-0 left-0 group-hover:w-full transition-all duration-300"></span></a>
+                </li>
+                <li><a href="index.html#shows"
+                        class="text-amber-100 hover:text-mystical-gold uppercase tracking-wider text-sm md:text-base font-medium transition-colors duration-300 relative group">Shows<span
+                            class="absolute h-0.5 w-0 bg-gradient-to-r from-mystical-gold to-mystical-amber bottom-0 left-0 group-hover:w-full transition-all duration-300"></span></a>
+                </li>
+                <li><a href="index.html#about"
+                        class="text-amber-100 hover:text-mystical-gold uppercase tracking-wider text-sm md:text-base font-medium transition-colors duration-300 relative group">About<span
+                            class="absolute h-0.5 w-0 bg-gradient-to-r from-mystical-gold to-mystical-amber bottom-0 left-0 group-hover:w-full transition-all duration-300"></span></a>
+                </li>
             </ul>
         </nav>
 
-        <main class="px-4 py-8 max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-                <!-- Product 1 -->
-                <div class="bg-black/30 backdrop-blur-md rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-500 border border-mystical-amber/20">
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-mystical-gold/40 to-mystical-crimson/40 mix-blend-overlay z-10 transition-all duration-500 group-hover:opacity-80"></div>
-                        <img src="gechoTdesign1.png" alt="C I O K K O T-shirt" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105">
-                    </div>
-                    <div class="p-8">
-                        <h2 class="font-unbounded text-2xl text-gradient from-mystical-gold to-mystical-amber mb-2">C I O K K O</h2>
-                        <p class="text-amber-100 mb-4">Design by @yanusthepuss</p>
-                        <div class="flex justify-between items-center">
-                            <p class="text-xl font-bold text-mystical-gold">$0.01</p>
-                            <a href="paymentScreen.html" class="inline-block px-6 py-2 bg-gradient-to-r from-mystical-crimson to-mystical-wine hover:from-mystical-amber hover:to-mystical-crimson rounded-full uppercase tracking-wider font-medium text-white transition-all duration-300 hover:shadow-lg hover:shadow-mystical-gold/30 hover:-translate-y-1">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 2 -->
-                <div class="bg-black/30 backdrop-blur-md rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-500 border border-mystical-amber/20">
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-mystical-gold/40 to-mystical-crimson/40 mix-blend-overlay z-10 transition-all duration-500 group-hover:opacity-80"></div>
-                        <img src="gechoTdesign2.png" alt="G E L C O T-shirt" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105">
-                    </div>
-                    <div class="p-8">
-                        <h2 class="font-unbounded text-2xl text-gradient from-mystical-gold to-mystical-amber mb-2">G E L C O</h2>
-                        <p class="text-amber-100 mb-4">Design by @ezpzbundelight</p>
-                        <div class="flex justify-between items-center">
-                            <p class="text-xl font-bold text-mystical-gold">$0.01</p>
-                            <a href="paymentScreen.html" class="inline-block px-6 py-2 bg-gradient-to-r from-mystical-crimson to-mystical-wine hover:from-mystical-amber hover:to-mystical-crimson rounded-full uppercase tracking-wider font-medium text-white transition-all duration-300 hover:shadow-lg hover:shadow-mystical-gold/30 hover:-translate-y-1">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
+        <main class="py-16 md:py-24 px-4 max-w-6xl mx-auto">
+            <h2 class="font-unbounded text-3xl md:text-4xl mb-10 text-center bg-clip-text text-transparent bg-gradient-to-r from-mystical-gold to-mystical-crimson">
+                Official Merchandise
+            </h2>
+            <div id="products-container" class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <!-- Products will be loaded here -->
             </div>
         </main>
 
+        <!-- Load products data -->
+        <script src="js/products.js"></script>
+
+        <!-- Generate product cards -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const productsContainer = document.getElementById('products-container');
+
+                // Generate HTML for each product
+                storeProducts.forEach(product => {
+                    const productCard = `
+                        <div class="bg-black/40 backdrop-blur-sm rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-500 border border-mystical-amber/30">
+                            <div class="relative">
+                                <div class="absolute inset-0 bg-gradient-to-br from-mystical-amber/40 to-mystical-crimson/40 mix-blend-overlay z-10 transition-all duration-500 group-hover:opacity-80">
+                                </div>
+                                <img src="${product.image}" alt="${product.alt}" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                            <div class="p-8">
+                                <h2 class="font-unbounded text-2xl bg-clip-text text-transparent bg-gradient-to-r from-mystical-gold to-mystical-amber mb-2">
+                                    ${product.name}
+                                </h2>
+                                <p class="text-amber-100 mb-4">Design by ${product.designer}</p>
+                                <div class="flex justify-between items-center">
+                                    <p class="text-xl font-bold text-mystical-gold">${product.price}</p>
+                                    <a href="${product.url}" class="inline-block px-6 py-2 bg-gradient-to-r from-mystical-crimson to-mystical-wine hover:from-mystical-amber hover:to-mystical-crimson rounded-full uppercase tracking-wider font-medium text-white transition-all duration-300 hover:shadow-lg hover:shadow-mystical-gold/30 hover:-translate-y-1">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+
+                    productsContainer.innerHTML += productCard;
+                });
+            });
+        </script>
+
         <footer class="py-12 bg-black/60 backdrop-blur-md mt-24">
             <div class="flex justify-center space-x-6 mb-6">
-                <a href="https://www.facebook.com/Gecho.Band/" class="w-12 h-12 rounded-full flex items-center justify-center bg-black/50 hover:bg-gradient-to-r from-mystical-amber to-mystical-crimson transition-colors duration-300">
+                <a href="https://www.facebook.com/Gecho.Band/"
+                    class="w-12 h-12 rounded-full flex items-center justify-center bg-black/50 hover:bg-gradient-to-r from-mystical-amber to-mystical-crimson transition-colors duration-300">
                     <i class="fab fa-facebook-f text-xl"></i>
                 </a>
-                <a href="https://www.instagram.com/gecho.band/" class="w-12 h-12 rounded-full flex items-center justify-center bg-black/50 hover:bg-gradient-to-r from-mystical-amber to-mystical-crimson transition-colors duration-300">
+                <a href="https://www.instagram.com/gecho.band/"
+                    class="w-12 h-12 rounded-full flex items-center justify-center bg-black/50 hover:bg-gradient-to-r from-mystical-amber to-mystical-crimson transition-colors duration-300">
                     <i class="fab fa-instagram text-xl"></i>
                 </a>
-                <a href="https://www.youtube.com/channel/UCIamFSeJ3nbedTnM_J9S9HA" class="w-12 h-12 rounded-full flex items-center justify-center bg-black/50 hover:bg-gradient-to-r from-mystical-amber to-mystical-crimson transition-colors duration-300">
+                <a href="https://www.youtube.com/channel/UCIamFSeJ3nbedTnM_J9S9HA"
+                    class="w-12 h-12 rounded-full flex items-center justify-center bg-black/50 hover:bg-gradient-to-r from-mystical-amber to-mystical-crimson transition-colors duration-300">
                     <i class="fab fa-youtube text-xl"></i>
                 </a>
-                <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center bg-black/50 hover:bg-gradient-to-r from-mystical-amber to-mystical-crimson transition-colors duration-300">
+                <a href="#"
+                    class="w-12 h-12 rounded-full flex items-center justify-center bg-black/50 hover:bg-gradient-to-r from-mystical-amber to-mystical-crimson transition-colors duration-300">
                     <i class="fab fa-spotify text-xl"></i>
                 </a>
-                <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center bg-black/50 hover:bg-gradient-to-r from-mystical-amber to-mystical-crimson transition-colors duration-300">
+                <a href="#"
+                    class="w-12 h-12 rounded-full flex items-center justify-center bg-black/50 hover:bg-gradient-to-r from-mystical-amber to-mystical-crimson transition-colors duration-300">
                     <i class="fab fa-bandcamp text-xl"></i>
                 </a>
             </div>
@@ -163,4 +161,5 @@
         </footer>
     </div>
 </body>
+
 </html>
