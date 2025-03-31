@@ -1,0 +1,143 @@
+/* Global styles for Gecho website */
+
+/* Variables for consistent theming */
+:root {
+    --mystical-gold: #f59e0b;
+    --mystical-amber: #d97706;
+    --mystical-bronze: #b45309;
+    --mystical-crimson: #9f1239;
+    --mystical-wine: #7f1d1d;
+}
+
+/* Base styles */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+    background-color: black;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Unbounded', cursive;
+}
+
+/* Background styles */
+.biblical-bg {
+    background-image: url('./wallpaper_biblical.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Text utilities */
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.mystical-shadow {
+    text-shadow: 0 0 8px #f59e0b, 0 0 12px #b45309;
+}
+
+/* Animation classes */
+@keyframes gradient {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #f59e0b;
+    }
+
+    100% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #b45309, 0 0 30px #9f1239;
+    }
+}
+
+.animate-gradient {
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+}
+
+.animate-float {
+    animation: float 10s ease-in-out infinite;
+}
+
+.animation-delay-1000 {
+    animation-delay: 1s;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Layer styles */
+.z-0 {
+    z-index: 0;
+}
+
+.z-1 {
+    z-index: 1;
+}
+
+.z-2 {
+    z-index: 2;
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+.z-50 {
+    z-index: 50;
+}
